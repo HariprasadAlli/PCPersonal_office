@@ -1,0 +1,30 @@
+package smartInterviewsBasics;
+
+public class FindDuplicateinArray {
+
+	public static void main(String args[]) {
+
+		FindDuplicateinArrayMethod();
+	}
+
+	public static void FindDuplicateinArrayMethod() {
+		int N = 6;
+		int count;
+		int[] A = { 5, 4, 10, 9, 21, 10 };
+		for (int array : A) {
+			count = 0;
+			for (int i = 0; i < N; i++) {
+				if (array == A[i]) {
+					count++;
+				}
+
+				if (count > 1) {
+					System.out.println(array);
+
+				}
+			}
+
+		}
+
+	}
+}

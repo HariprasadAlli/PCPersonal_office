@@ -1,0 +1,43 @@
+package restart1.restart1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class day5_shadowroot {
+
+	public static void main(String[] args) throws Exception {
+		// Setup ChromeDriver automatically
+				WebDriverManager.chromedriver().setup();
+
+				ChromeOptions options = new ChromeOptions();
+				WebDriver driver = new ChromeDriver(options);
+
+				// Browser setup
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				driver.manage().window().maximize();
+
+				// Navigate to URL
+				driver.get("https://practice.expandtesting.com/shadowdom");
+				Thread.sleep(2000);
+				WebElement shadowHost = driver.findElement(By.id("shadow-host"));				
+				JavascriptExecutor js =(JavascriptExecutor) driver;
+				WebElement shadowButton = (WebElement) js.executeScript(
+					    "return arguments[0].shadowRoot.querySelector('#my-btn')",shadowHost);
+					shadowButton.click();
+
+
+
+
+	}
+
+}

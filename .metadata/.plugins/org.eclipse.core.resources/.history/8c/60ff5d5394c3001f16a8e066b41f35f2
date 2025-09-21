@@ -1,0 +1,17 @@
+package j_p1_baosic;
+
+public class Hacker_IntStrToString {
+	public static void main(String args[]) {
+		int num = 123;
+		String str = Integer.toString(num);
+		System.out.println(str+1);
+		
+		
+		String str1 = "123";
+		int num1 = Integer.parseInt(str1);
+		System.out.println(num1 + 1);
+		
+	}
+	
+
+}

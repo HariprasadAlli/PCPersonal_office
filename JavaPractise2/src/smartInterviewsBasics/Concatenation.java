@@ -1,0 +1,23 @@
+package smartInterviewsBasics;
+
+public class Concatenation {
+
+	public static void main(String args[]) {
+		ConcatenationMethod();
+	}
+
+	public static void ConcatenationMethod() {
+		int N = 3;
+		int[] A = { 6, 7, 7 };
+		int[] B = new int[2*N];
+		for (int i = 0; i < N; i++) {
+			B[i] = A[i];
+		}
+		for (int i = 0; i < N; i++) {
+			B[i + N] = A[i];
+		}
+		for (int i = 0; i < 2 * N; i++) {
+			System.out.print(B[i]);
+		}
+	}
+}

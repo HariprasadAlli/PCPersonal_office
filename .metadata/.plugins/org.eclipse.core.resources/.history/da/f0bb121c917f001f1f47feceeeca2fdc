@@ -1,0 +1,79 @@
+package com.glams.qa.testcases;
+
+import java.io.IOException;
+
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.glams.ExtentReportListener.ScreenshotITListener;
+import com.glams.qa.base.TestBase;
+import com.glams.qa.pages.DashboardPage;
+import com.glams.qa.pages.GLAMSComponentTrackerPage;
+import com.glams.qa.pages.LoginPage;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class GLAMSComponentTrackerPageTest extends TestBase {
+
+    LoginPage loginPage;
+    DashboardPage dashboardPage;
+    GLAMSComponentTrackerPage glamsComponentTrackerPage;
+    ScreenshotITListener screenshotListener = new ScreenshotITListener(); // Use ScreenshotITListener via composition
+
+    public GLAMSComponentTrackerPageTest() {
+        super();
+    }
+
+    @BeforeMethod
+    public void setUp() {
+        initialization();
+        screenshotListener.driver = driver; // Pass the driver to ScreenshotITListener
+        screenshotListener.setExtent(); // Initialize ExtentReports here
+
+        loginPage = new LoginPage();
+        loginPage.clickOpenMenu();
+        loginPage.clickFrenchtoEnglish();
+        dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"), 7, 7, 7);
+        glamsComponentTrackerPage = dashboardPage.clickOnGLAMSComponentTrackerPage();
+    }
+
+    @Test
+    public void HoldAComponentJob() throws InterruptedException {
+        // Start ExtentTest for this specific test case
+        screenshotListener.extentTest = screenshotListener.extent.startTest("HoldAComponentJob");
+
+        // Perform the actions for the test
+        glamsComponentTrackerPage.SearchandJobControl();
+        glamsComponentTrackerPage.AddbothComments();
+        glamsComponentTrackerPage.HoldJob();
+
+        // Log the result as passed in ExtentReport
+        screenshotListener.extentTest.log(LogStatus.PASS, "HoldAComponentJob passed");
+    }
+
+    @AfterMethod
+    public void tearDown(ITestResult result) throws IOException {
+        // Capture screenshot and update the ExtentReport based on test result
+        if (result.getStatus() == ITestResult.FAILURE) {
+            // Log failure message and capture screenshot
+            screenshotListener.extentTest.log(LogStatus.FAIL, "Test Case Failed: " + result.getName());
+            screenshotListener.extentTest.log(LogStatus.FAIL, "Error: " + result.getThrowable());
+            String screenshotPath = screenshotListener.getScreenshot(result.getName());
+            screenshotListener.extentTest.log(LogStatus.FAIL, screenshotListener.extentTest.addScreenCapture(screenshotPath));
+        } else if (result.getStatus() == ITestResult.SUCCESS) {
+            // Log success message
+            screenshotListener.extentTest.log(LogStatus.PASS, "Test Case Passed: " + result.getName());
+        } else if (result.getStatus() == ITestResult.SKIP) {
+            // Log skipped message
+            screenshotListener.extentTest.log(LogStatus.SKIP, "Test Case Skipped: " + result.getName());
+        }
+
+        // End and flush the ExtentReport
+        screenshotListener.extent.endTest(screenshotListener.extentTest);
+        screenshotListener.extent.flush();
+
+        // Quit the WebDriver after test execution
+        driver.quit();
+    }
+}

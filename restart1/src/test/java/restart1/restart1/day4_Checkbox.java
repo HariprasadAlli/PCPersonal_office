@@ -1,0 +1,49 @@
+package restart1.restart1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class day4_Checkbox {
+
+	public static void main(String[] args) throws Exception {
+		// Setup ChromeDriver automatically
+				WebDriverManager.chromedriver().setup();
+
+				ChromeOptions options = new ChromeOptions();
+				WebDriver driver = new ChromeDriver(options);
+
+				// Browser setup
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				driver.manage().window().maximize();
+
+				// Navigate to URL
+				driver.get("https://www.qa-practice.com/elements/checkbox/single_checkbox");
+				Thread.sleep(2000);
+				
+				WebElement element = driver.findElement(By.name("checkbox"));
+				
+				if(!element.isSelected()) {
+					element.click();
+				}
+				
+				Assert.assertTrue(element.isSelected(), "Element is not selected");
+				Assert.assertEquals(element.isSelected(), true, "element not selected check once");
+				System.out.println("pass");
+				
+				if(element.isSelected()) {
+					System.out.println("selected- working");
+				}
+				
+				driver.quit();
+
+	}
+
+}

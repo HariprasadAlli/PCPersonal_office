@@ -1,0 +1,14 @@
+package smartInterviewsBasics;
+
+public class TraiangleValidator {
+	public static void main(String args[]) {
+		TraiangleValidatorMethod(4, 3, 5);
+	}
+	
+	public static void TraiangleValidatorMethod(float Area, int Breadth, int Height) {
+		float Area = 0.5f * Breadth * Height
+		System.out.println(Area);
+		
+	}
+
+}

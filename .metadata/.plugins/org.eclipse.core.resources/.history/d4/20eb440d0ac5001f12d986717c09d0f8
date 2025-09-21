@@ -1,0 +1,17 @@
+package smartInterviewsBasics;
+
+public class Concatenation {
+
+	public static void main(String args[]) {
+		ConcatenationMethod();
+	}
+	
+	public static void ConcatenationMethod() {
+		
+		int[] A = {6, 7, 7};
+		int[] B = A;
+		System.out.println(A[]+B[]);
+		
+		
+	}
+}

@@ -1,0 +1,20 @@
+package j_p1_baosic;
+
+public class Hacker_JavaDataTypes {
+	
+	 public static void main(String[] args) {
+		 int a = 2123;
+		 System.out.println("Can be fit in : ");
+		 
+		 if(a> -128 && a < 127) {System.out.println("* byte");}
+		 if(a> -32768 && a < 32767) {System.out.println("* short");}
+		 if(a> -2147483648 && a < 2147483647) {System.out.println("* int");}
+		 
+		 else {
+			 System.out.println("can't be fitted any where");
+		 }
+		 
+		 
+	 }
+
+}

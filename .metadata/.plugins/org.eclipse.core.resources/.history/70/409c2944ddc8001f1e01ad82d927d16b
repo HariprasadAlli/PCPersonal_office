@@ -1,0 +1,13 @@
+package smartInterviewsBasics;
+
+public class ReverseArray {
+	public static void main(String args[]) {
+		int N = 4;
+		int[] A = { 1, 2, 3, 4 };
+		for (int i = 3; i >= 1; i--) {
+			for (int array : A[i]) {
+				System.out.println(array);
+			}
+		}
+	}
+}

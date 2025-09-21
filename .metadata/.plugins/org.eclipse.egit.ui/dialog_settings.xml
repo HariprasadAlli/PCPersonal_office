@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="2"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/HariprasadAlli/ProjectAA.git"/>
+		<item value="https://github.com/HariPrasadAlli-AHP/DemoTest.git"/>
+		<item value="https://github.com/HariprasadAlli/Selenium_Q.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="HariPrasadAlli &lt;hariprasadalli4@gmail.com&gt;"/>
+		<item value="hariprasad.alli &lt;hariprasad.alli@PP-IN-LAP-193.perigord.internal&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="HariPrasadAlli &lt;hariprasadalli4@gmail.com&gt;"/>
+		<item value="hariprasad.alli &lt;hariprasad.alli@PP-IN-LAP-193.perigord.internal&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="true"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\hariprasad.alli\git\Selenium_Q\.git">
+			<item value="false"/>
+			<item value="hariprasad.alli &lt;hariprasad.alli@PP-IN-LAP-193.perigord.internal&gt;"/>
+			<item value="Git to Eclipse"/>
+			<item value="hariprasad.alli &lt;hariprasad.alli@PP-IN-LAP-193.perigord.internal&gt;"/>
+			<item value="9ddf486928085e0e57db9741f214cccbb5da7c0d"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+		<list key="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\TestGit\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\ProjectGit\.git">
+			<item value="false"/>
+			<item value="hariprasad.alli &lt;hariprasad.alli@PP-IN-LAP-193.perigord.internal&gt;"/>
+			<item value="First COmmit after PWD recovery"/>
+			<item value="hariprasad.alli &lt;hariprasad.alli@PP-IN-LAP-193.perigord.internal&gt;"/>
+			<item value="13dff9180290e049914892f2ca340a9a5d6d4c90"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+		<list key="C:\Users\hariprasad.alli\git\ProjectAA\.git">
+			<item value="false"/>
+			<item value="HariPrasadAlli &lt;hariprasadalli4@gmail.com&gt;"/>
+			<item value="Merge branch &apos;main&apos; of https://github.com/HariprasadAlli/ProjectAA.git into main"/>
+			<item value="HariPrasadAlli &lt;hariprasadalli4@gmail.com&gt;"/>
+			<item value="e3ce8b4108c00ca6f7a906e669d36a11c99a6bfd"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="199"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="481"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+	<section name="GitImportWizard">
+	</section>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="606"/>
+		<item key="DIALOG_Y_ORIGIN" value="228"/>
+		<item key="DIALOG_WIDTH" value="726"/>
+		<item key="DIALOG_HEIGHT" value="437"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.MergeTargetSelectionDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="15"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="757"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

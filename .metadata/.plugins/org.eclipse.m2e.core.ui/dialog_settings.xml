@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\Selenium1\src\test\java\selenium\SampleTestcase3.java"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\google\src\test\java\https\HTTPSRequests.java"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\google\src\test\java\com\example\google\ShadowDom.java"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\N_Automation2\src\main\java\com\glams\qa\pages\DashboardPage.java"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\N2_Aut\pom.xml"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\N_Automation2"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\N_Automation2\src\main\java\com\glams\qa\util\TestUtil.java"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\BrushupArtifact"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\N_Automation"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\N_Automation\src\test\java\com\glams\qa\testcases\GLAMSComponentTrackerPageTest.java"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\Selenium1"/>
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\Selenium1\src\main\java\GLAMS"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="restart1.restart1"/>
+		</list>
+		<list key="groupId">
+			<item value="restart1"/>
+		</list>
+		<list key="artifactId">
+			<item value="restart1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\hariprasad.alli\OneDrive - Perigord Premedia Ltd\Documents\Eclipse\Practise\API_clone"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

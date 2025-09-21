@@ -1,0 +1,63 @@
+package restart1.restart1;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class day4_JSHighLightbutton {
+	public static void main(String[] args) throws Exception {
+
+		// Setup ChromeDriver automatically
+		WebDriverManager.chromedriver().setup();
+
+		ChromeOptions options = new ChromeOptions();
+		WebDriver driver = new ChromeDriver(options);
+
+		// Browser setup
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+
+		// Navigate to URL
+//		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html	");
+//		WebElement element = driver.findElement(By.xpath("//button[@id='newWindowBtn']"));
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].style.border='3px solid red'", element);
+		
+		
+		
+		driver.get("https://www.qa-practice.com/elements/input/simple");
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		WebElement inputElement = driver.findElement(By.xpath("//input[@name='text_string']"));
+		js.executeScript("arguments[0].value='Hari';", inputElement);
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

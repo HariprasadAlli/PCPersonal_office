@@ -1,0 +1,8 @@
+package com.glams.qa.testcases;
+
+public class java {
+		private void syso() {
+			System.out.println("1");
+
+		}
+}

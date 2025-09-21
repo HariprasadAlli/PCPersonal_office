@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-10T04:45:06 IST" name="Default suite" finished-at="2025-09-10T04:45:10 IST" duration-ms="3699">
+    <groups>
+    </groups>
+    <test started-at="2025-09-10T04:45:06 IST" name="Default test" finished-at="2025-09-10T04:45:10 IST" duration-ms="3699">
+      <class name="automationStepBystep.GETPOST">
+        <test-method signature="testGET()[pri:1, instance:automationStepBystep.GETPOST@6404f418]" started-at="2025-09-10T04:45:06 IST" name="testGET" finished-at="2025-09-10T04:45:09 IST" duration-ms="2996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGET -->
+        <test-method signature="testPOST()[pri:2, instance:automationStepBystep.GETPOST@6404f418]" started-at="2025-09-10T04:45:09 IST" name="testPOST" finished-at="2025-09-10T04:45:10 IST" duration-ms="648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPOST -->
+      </class> <!-- automationStepBystep.GETPOST -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

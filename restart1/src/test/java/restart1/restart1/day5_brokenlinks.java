@@ -1,0 +1,46 @@
+package restart1.restart1;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class day5_brokenlinks {
+
+	public static void main(String[] args) throws Exception {
+		// Setup ChromeDriver automatically
+		WebDriverManager.chromedriver().setup();
+
+		ChromeOptions options = new ChromeOptions();
+		WebDriver driver = new ChromeDriver(options);
+
+		// Browser setup
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+
+		// Navigate to URL
+		driver.get("https://practice.expandtesting.com/shadowdom");
+		Thread.sleep(2000);
+		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+		System.out.println("Total links found: " + allLinks.size());
+
+		for (WebElement link : allLinks) {
+		    String url = link.getAttribute("href");
+
+		    if (url == null || url.isEmpty()) {
+		        System.out.println("⛔ URL is empty or not configured for element: " + link.getText());
+		        continue;
+		    }
+
+		    System.out.println("Link text: " + link.getText() + "  -->  " + url);
+		}
+		driver.quit();
+
+	}
+}

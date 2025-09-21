@@ -1,0 +1,27 @@
+package smartInterviewsBasics;
+
+public class NarcissisticNumbers {
+
+	public static void main(String args[]) {
+		NarcissisticNumbersMethod();
+	}
+
+	public static void NarcissisticNumbersMethod() {
+		int Num = 153;
+		int temp = Num;
+		int cube = 1;
+		while (temp > 0) {
+			int rem = temp % 10;
+			cube = rem * rem * rem + cube;
+			temp = temp / 10;
+
+		}
+		if (Num == temp) {
+			System.out.println("Armstrong");
+		} else {
+			System.out.println("Not an Armstrong");
+		}
+
+	}
+
+}

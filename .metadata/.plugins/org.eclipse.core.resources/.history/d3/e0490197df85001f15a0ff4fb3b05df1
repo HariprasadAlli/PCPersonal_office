@@ -1,0 +1,19 @@
+package basicPrograms;
+
+public class FibonacciSeries {
+	int num = 7;
+	int firstNumber = 0;
+	int secondNumber = 1;
+	{
+	for(int i = 1; i<=num; i++)
+	{
+		int fib = firstNumber+secondNumber;
+		System.out.println(fib);
+		firstNumber = secondNumber;
+		secondNumber = fib;
+	}
+	
+	
+
+}
+}

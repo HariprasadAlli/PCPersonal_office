@@ -1,0 +1,13 @@
+package j_p1_baosic;
+
+public class overRiding_1_03_Dog  extends overRiding_1_01_Animal {
+	
+	public void Animal() {
+		System.out.println("Dog barks");
+	}
+	
+	public static void main(String args[]) {
+		overRiding_1_02_Animal myAnimal = 
+	}
+
+}

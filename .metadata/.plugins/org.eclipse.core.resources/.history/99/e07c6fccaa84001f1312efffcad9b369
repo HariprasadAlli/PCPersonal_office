@@ -1,0 +1,12 @@
+package basicPrograms;
+
+public class palindrome {
+	
+	int num = 123, rev = 0, rem;
+	
+	while(num>0) {
+		rem = num%10;               //%-remainder
+		
+	}
+
+}

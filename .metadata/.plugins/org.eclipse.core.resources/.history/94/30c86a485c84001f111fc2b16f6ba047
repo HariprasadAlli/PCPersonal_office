@@ -1,0 +1,13 @@
+package constructor;
+
+public class conspractise {
+	String user1;
+	String user2;
+	public conspractise(int x, int y) {
+		user1 = x;
+		
+		
+		
+	}
+
+}

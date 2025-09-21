@@ -1,0 +1,15 @@
+com\glams\qa\util\RandomVariables.class
+com\glams\ExtentReportListener\ScreenshotITListener.class
+com\glams\qa\pages\GLAMSArtworkUploadPage.class
+com\glams\qa\pages\GLAMSRoutingPage.class
+com\glams\qa\util\TestUtil.class
+com\glams\qa\util\ScreenshotUtil_G.class
+com\glams\qa\pages\GLAMSComponentRepositoryPage.class
+com\glams\qa\pages\GLAMSFinalApprovalPage.class
+com\example\MavenTestProject\App.class
+com\glams\qa\pages\GLAMSComponentTrackerPage.class
+com\glams\ExtentReportListener\ExtentReporterNG.class
+com\glams\qa\base\TestBase.class
+com\glams\qa\pages\DashboardPage.class
+com\glams\qa\pages\LoginPage.class
+com\glams\qa\pages\GLAMSComponentRequestPage.class

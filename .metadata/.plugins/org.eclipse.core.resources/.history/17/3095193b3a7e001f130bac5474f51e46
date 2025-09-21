@@ -1,0 +1,84 @@
+package com.glams.qa.testcases;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+public class SampleTestcase2 {
+	public WebDriver driver;
+	public ExtentReports extent;
+	public ExtentTest logger;
+
+	@BeforeTest
+	public void setExtent() {
+		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReport.html", true);
+		extent.addSystemInfo("User Name", "Hariprasad");
+		extent.addSystemInfo("OS", "Window11");
+		extent.addSystemInfo("Host Name", "Hariprasad");
+	}
+
+	@AfterTest
+	public void endRport() {
+		extent.flush();
+		extent.close();
+	}
+	
+	public String getScreenshot(WebDriver driver, String ScreenshotName) {
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File Sourcem= ts.getScreenshotAs(OutputType.FILE);
+		//After execution., you could see a folder "FailedTestsScreensgots" -> under src folder
+		String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots" + ScreenshotName + dateName + ".png";
+		File finalDestination = new File(destination);
+		FileUtils.copyFile(Source, finalDestination);
+		
+		return destination;
+	}
+
+	@BeforeMethod
+	public void setUp() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\hariprasad.alli\\OneDrive - Perigord Premedia Ltd\\Documents\\Eclipse\\Practise\\testing.glams\\target\\Server\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+
+		driver.navigate()
+				.to("https://glams6qa.glams.ie/Login?returnUrl=%2FRequest%3FType%3DDefault%26taskName%3DDashboard");
+
+		System.out.println("who are youl;");
+	}
+
+	@Test
+	public void GLAMS() {
+
+		driver.findElement(By.xpath("//button[@id='open-menu']")).click();
+		driver.findElement(By.xpath("//ul[@id='language-menu']//li//a[text()='English ']")).click();
+
+		driver.findElement(By.xpath("//input[@id='UserName']")).sendKeys("Hariprasad");
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("Perigord2!");
+		driver.findElement(By.xpath("//button[@id='login_submit']")).click();
+		driver.findElement(By.id("vpin1")).sendKeys("7");
+		driver.findElement(By.id("vpin2")).sendKeys("7");
+		driver.findElement(By.id("vpin3")).sendKeys("7");
+		driver.findElement(By.xpath("//*[@value = 'Submit']")).click();
+		driver.quit();
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test parallel="none" name="Default test(failed)">
+    <classes>
+      <class name="ExtendReports.FreeCRMTest">
+        <methods>
+          <include name="endReport"/>
+          <include name="setExtent"/>
+        </methods>
+      </class> <!-- ExtendReports.FreeCRMTest -->
+      <class name="ExtendReports.FreeCRMTest$TestSuite">
+        <methods>
+          <include name="runFreeCrmTests"/>
+        </methods>
+      </class> <!-- ExtendReports.FreeCRMTest$TestSuite -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,10 @@
+package j_p1_baosic;
+
+public class overRiding_1_01_Animal {
+	
+	public void sound() {
+		System.out.println("Animal Makes Sound");
+	}
+	
+
+}

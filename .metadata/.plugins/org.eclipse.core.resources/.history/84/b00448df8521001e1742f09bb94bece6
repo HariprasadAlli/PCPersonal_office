@@ -1,0 +1,19 @@
+package testing.glams;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+
+public class accessglams {
+	
+	public void accessglams1() throws InterruptedException{
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		//driver.navigate().to("https://glams521qa.glams.ie/");
+		driver.get("https://glams521qa.glams.ie/");
+	}
+
+}

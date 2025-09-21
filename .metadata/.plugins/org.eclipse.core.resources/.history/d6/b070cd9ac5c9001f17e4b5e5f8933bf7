@@ -1,0 +1,28 @@
+package smartInterviewsBasics;
+
+public class NarcissisticNumberCheck {
+    public static void main(String[] args) {
+        int N = 8208; // Assign your input value here
+        if (isNarcissistic(N)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+
+    public static boolean isNarcissistic(int N) {
+        int temp = N;
+        int sum = 0;
+        int digits = String.valueOf(N).length(); // Find the number of digits in N
+
+        // Calculate the sum of each digit raised to the power of digits
+        while (temp > 0) {
+            int rem = temp % 10; // Extract the last digit
+            sum += Math.pow(rem, digits); // Add the digit raised to the power of the number of digits
+            temp /= 10; // Remove the last digit
+        }
+
+        // Check if the sum equals the original number
+        return sum == N;
+    }
+}

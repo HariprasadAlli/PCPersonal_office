@@ -1,0 +1,23 @@
+package constructor;
+
+class JavaContructor {
+	 JavaContructor() {
+		System.out.println("JavaConstructor");
+	}
+}
+
+class dog extends JavaContructor {
+	 dog() {
+		super();
+		System.out.println("dog");
+	}
+
+}
+
+public class All {
+	public static void main(String args[]) {
+		dog d1 = new dog();
+
+	}
+
+}

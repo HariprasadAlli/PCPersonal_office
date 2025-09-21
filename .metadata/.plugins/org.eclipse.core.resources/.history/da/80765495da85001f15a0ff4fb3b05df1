@@ -1,0 +1,25 @@
+package basicPrograms;
+
+public class ArmstrongNumber {
+public static void main(String argsp[]) {
+int num = 153;
+int temp=num;
+	int rem;
+	int arm = 0;
+	
+	while(num>0)
+	{
+		rem = num % 10;
+		arm = arm + rem * rem * rem;
+		num = num / 10;
+	}if(arm==temp)
+	{
+		System.out.println("Arm strong");
+	}else
+	{
+		System.out.println("error");
+	}
+	
+	}
+	
+}

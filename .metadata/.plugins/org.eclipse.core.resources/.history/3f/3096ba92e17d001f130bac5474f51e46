@@ -1,0 +1,51 @@
+package com.glams.qa.testcases;
+
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.glams.qa.base.TestBase;
+import com.glams.qa.pages.DashboardPage;
+import com.glams.qa.pages.GLAMSComponentTrackerPage;
+import com.glams.qa.pages.LoginPage;
+
+public class GLAMSComponentTrackerPageTest extends TestBase{
+	
+	LoginPage loginPage;
+	DashboardPage dashboardPage;
+	GLAMSComponentTrackerPage glamsComponentTrackerPage;
+
+	
+	
+	public GLAMSComponentTrackerPageTest() {
+		super();
+	}
+
+	@BeforeMethod
+	public void setUp() {
+		initialization();
+		loginPage = new LoginPage();
+		loginPage.clickOpenMenu();
+		loginPage.clickFrenchtoEnglish();
+		dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"), 7, 7, 7);
+		glamsComponentTrackerPage = dashboardPage.clickOnGLAMSComponentTrackerPage();
+		
+	}
+	
+	@Test
+	public void HoldAComponentJob() throws InterruptedException {
+		implictwait();
+		glamsComponentTrackerPage.SearchandJobControl();
+		glamsComponentTrackerPage.AddbothComments();
+		glamsComponentTrackerPage.HoldJob();
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		//driver.quit();
+	}
+
+}

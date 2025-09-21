@@ -1,0 +1,53 @@
+package com.glams.qa.testcases;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.glams.ExtentReportListener.ScreenshotITListener;
+import com.glams.qa.base.TestBase;
+import com.glams.qa.pages.DashboardPage;
+import com.glams.qa.pages.GLAMSComponentTrackerPage;
+import com.glams.qa.pages.LoginPage;
+
+public class GLAMSComponentTrackerPageTest extends TestBase {
+
+	LoginPage loginPage;
+	DashboardPage dashboardPage;
+	GLAMSComponentTrackerPage glamsComponentTrackerPage;
+	ScreenshotITListener screenshotListener = new ScreenshotITListener();
+
+	public GLAMSComponentTrackerPageTest() {
+		super();
+	}
+
+	@BeforeMethod
+	public void setUp() {
+		initialization();
+		loginPage = new LoginPage();
+		loginPage.clickOpenMenu();
+		loginPage.clickFrenchtoEnglish();
+		dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"), 7, 7, 7);
+		glamsComponentTrackerPage = dashboardPage.clickOnGLAMSComponentTrackerPage();
+
+	}
+
+	@Test
+	public void HoldAComponentJob() throws InterruptedException {
+		// Start ExtentTest for this specific test case
+		screenshotListener.extentTest = screenshotListener.extent.startTest("HoldAComponentJob");
+		glamsComponentTrackerPage.SearchandJobControl();
+		glamsComponentTrackerPage.AddbothComments();
+		glamsComponentTrackerPage.HoldJob();
+		screenshotListener.extentTest.log(com.relevantcodes.extentreports.LogStatus.PASS, "HoldAComponentJob passed");
+	}
+
+	@AfterMethod
+	public void tearDown(org.testng.ITestResult result) throws IOException {
+		// Handle screenshot and reporting in case of test failure or success
+		screenshotListener.tearDown(result);
+	}
+
+}

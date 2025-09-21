@@ -1,0 +1,39 @@
+package j_p1_baosic;
+
+public class overRiding_innerOuterClasses {
+
+	
+	public void sound() {
+		System.out.println("Animal Makes Sound");
+	}
+	
+	
+	public class overRiding_innerOuterClasses_pig{
+	
+	public void sound() {
+		System.out.println("pig sound: pee peeeeee");
+	}
+	
+	public class overRiding_innerOuterClasses_Dog{
+		
+		public void sound() {
+			System.out.println("Dog sound: bow bowww");
+		}
+		
+		
+		public static void main(String args[]) {
+			overRiding_1_01_Animal myAnimal = new overRiding_1_01_Animal();
+			overRiding_1_01_Animal myPig = new overRiding_1_02_pig();
+			overRiding_1_01_Animal myDog = new overRiding_1_03_Dog();
+			
+			myAnimal.sound();
+			myPig.sound();
+			myDog.sound();
+		}
+	
+	
+	
+	
+}
+}
+}

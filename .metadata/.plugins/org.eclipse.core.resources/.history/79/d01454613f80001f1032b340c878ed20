@@ -1,0 +1,53 @@
+package com.glams.qa.testcases;
+
+import com.glams.ExtentReportListener.ScreenshotITListener;
+import com.glams.qa.base.TestBase;
+import com.glams.qa.pages.DashboardPage;
+import com.glams.qa.pages.GLAMSComponentTrackerPage;
+import com.glams.qa.pages.LoginPage;
+import com.relevantcodes.extentreports.LogStatus;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class GLAMSComponentTrackerPageTest extends ScreenshotITListener {
+
+    LoginPage loginPage;
+    DashboardPage dashboardPage;
+    GLAMSComponentTrackerPage glamsComponentTrackerPage;
+
+    public GLAMSComponentTrackerPageTest() {
+        super();
+    }
+
+    @BeforeMethod
+    public void setUp() {
+        initialization();
+        loginPage = new LoginPage();
+        loginPage.clickOpenMenu();
+        loginPage.clickFrenchtoEnglish();
+        dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"), 7, 7, 7);
+        glamsComponentTrackerPage = dashboardPage.clickOnGLAMSComponentTrackerPage();
+    }
+
+    @Test
+    public void HoldAComponentJob() throws InterruptedException {
+        extentTest = extent.startTest("HoldAComponentJob"); // Start ExtentTest
+
+        glamsComponentTrackerPage.SearchandJobControl();
+        extentTest.log(LogStatus.INFO, "Searched and selected Job Control");
+
+        glamsComponentTrackerPage.AddbothComments();
+        extentTest.log(LogStatus.INFO, "Added comments for the job");
+
+        glamsComponentTrackerPage.HoldJob();
+        extentTest.log(LogStatus.PASS, "Job held successfully");
+
+        // Asserting for test success (if applicable)
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
+}

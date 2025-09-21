@@ -1,0 +1,10 @@
+package j_p1_baosic;
+
+public class ReverseAString {
+	
+	public static void main(String args[]) {
+		String Reverse = "ABCDEF";
+		
+	}
+
+}

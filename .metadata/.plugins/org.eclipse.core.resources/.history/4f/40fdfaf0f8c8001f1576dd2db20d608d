@@ -1,0 +1,21 @@
+package smartInterviewsBasics;
+
+public class TraiangleValidator {
+	public static void main(String args[]) {
+		TraiangleValidatorMethod(4, 3, 5);
+	}
+	
+	public static void TraiangleValidatorMethod(float Area, int Breadth, int Height) {
+		float validator = Area;
+		Area = 0.5f * Breadth * Height;
+		if(validator == Area) {
+			System.out.println("Its a Trainagle and Area is : " + Area);
+		}
+		
+		else {
+			System.out.println("Not a Trainagle dontworry please enter another vales");
+		}
+		
+	}
+
+}

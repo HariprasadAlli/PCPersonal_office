@@ -1,0 +1,64 @@
+<dependencies>
+    <!-- Selenium dependency -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.22.0</version>
+    </dependency>
+
+    <!-- TestNG dependency -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.8.0</version>
+        <scope>compile</scope>
+    </dependency>
+
+    <!-- Apache POI dependencies -->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.16-beta2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>3.16-beta2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml-schemas</artifactId>
+        <version>3.16-beta2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-scratchpad</artifactId>
+        <version>3.16-beta2</version>
+    </dependency>
+
+    <!-- Extent Reports dependency -->
+    <dependency>
+        <groupId>com.relevantcodes</groupId>
+        <artifactId>extentreports</artifactId>
+        <version>2.41.2</version>
+    </dependency>
+
+    <!-- Commons IO dependency -->
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.6</version>
+    </dependency>
+
+    <!-- Custom dependencies (if needed, but currently missing from repo) -->
+    <dependency>
+        <groupId>Brushup</groupId>
+        <artifactId>BrushupArtifact</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>ExcelGetData</groupId>
+        <artifactId>ExcelGetData</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+</dependencies>

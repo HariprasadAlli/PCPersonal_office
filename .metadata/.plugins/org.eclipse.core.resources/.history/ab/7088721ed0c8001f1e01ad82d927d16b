@@ -1,0 +1,25 @@
+package smartInterviewsBasics;
+
+public class UniqueElementsOfArray {
+
+	public static void main(String args[]) {
+		int N = 7;
+		int count;
+		int[] A = { 1, 2, 1, 2, 3, 4, 1, 3};
+		for (int array : A) {
+			count = 0;
+			for (int i = 0; i < N; i++) {
+				if (array == A[i]) {
+					count++;
+				}
+				
+				}
+			if (count <= 1) {
+				System.out.println(array);
+
+			}
+
+		}
+
+	}
+}

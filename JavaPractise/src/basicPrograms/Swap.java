@@ -1,0 +1,44 @@
+package basicPrograms;
+
+public class Swap {
+
+	public static void main(String args[]) {
+		withextravariable();
+		withoutextravariable();
+
+	}
+
+	public static void withextravariable() {
+
+		int a;
+		int b;
+		int c;
+		a = 10;
+		b = 20;
+		c = a;
+		a = b;
+		b = c;
+
+		System.out.println(a);
+		System.out.println(b);
+
+	}
+	
+	public static void withoutextravariable() {
+		int a =10; int b = 30;
+		
+		a=a+b; // a = 40
+		b=a-b; // b = 40-30
+		a=a-b; // a = 40-10
+		System.out.println("anotheR");
+		System.out.println(a);
+		System.out.println(b);
+	}
+	
+	
+	
+	
+	
+	
+	
+}

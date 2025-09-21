@@ -1,0 +1,11 @@
+package constructor;
+
+public class JavaContructor {
+	public JavaContructor() {
+		System.out.println("JavaConstructor");
+	}
+	public class dog() extends JavaContructor {
+		
+	}
+
+}

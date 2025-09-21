@@ -1,0 +1,21 @@
+package smartInterviewsBasics;
+
+public class Concatenation {
+
+	public static void main(String args[]) {
+		ConcatenationMethod();
+	}
+	
+	public static void ConcatenationMethod() {
+		
+		int[] numbers = {-2, -19, 50, 110, 100};
+		int Max = numbers[0];
+		for(int num : numbers) {
+			if(num > Max) {
+				Max = num;
+			}
+		}
+		System.out.println(Max);
+		
+	}
+}

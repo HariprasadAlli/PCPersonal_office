@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-03T16:46:22 IST" name="Default suite" finished-at="2025-09-03T16:46:24 IST" duration-ms="1912">
+    <groups>
+    </groups>
+    <test started-at="2025-09-03T16:46:22 IST" name="Default test" finished-at="2025-09-03T16:46:24 IST" duration-ms="1912">
+      <class name="https.CreateGLAMSJobTest">
+        <test-method signature="testCreateGLAMSJob()[pri:0, instance:https.CreateGLAMSJobTest@316bcf94]" started-at="2025-09-03T16:46:22 IST" name="testCreateGLAMSJob" finished-at="2025-09-03T16:46:24 IST" duration-ms="1873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateGLAMSJob -->
+      </class> <!-- https.CreateGLAMSJobTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

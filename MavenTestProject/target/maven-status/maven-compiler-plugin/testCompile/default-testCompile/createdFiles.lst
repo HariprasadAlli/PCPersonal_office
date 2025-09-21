@@ -1,0 +1,13 @@
+com\glams\qa\testcases\GLAMSRoutingPageTest.class
+com\glams\qa\testcases\SampleTestcase2.class
+com\glams\qa\testcases\DashboardPageTest.class
+com\glams\qa\testcases\GLAMSComponentTrackerPageTest.class
+com\glams\qa\testcases\GLAMSFinalApprovalPageTest.class
+com\glams\qa\testcases\SampleTestcase.class
+com\glams\qa\testcases\LoginPageTest.class
+com\glams\qa\testcases\GLAMSEntireWorkFlow.class
+com\glams\qa\testcases\SampleScreenshot$ScreenshotListener.class
+com\glams\qa\testcases\GLAMSArtworkPageTest.class
+com\example\tests\SampleTest.class
+com\glams\qa\testcases\SampleScreenshot.class
+com\glams\qa\testcases\GLAMSComponentRequestPageTest.class

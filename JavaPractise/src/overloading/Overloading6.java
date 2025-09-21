@@ -1,0 +1,23 @@
+package overloading;
+
+public class Overloading6 {
+	
+	public void Animal() {
+		System.out.println("1");
+	}
+}
+	class newover extends Overloading6{
+		public void Animal2() {
+			System.out.println("2");
+		}
+	
+	
+
+
+
+public static void main(String args[]) {
+	Overloading6 Obj = new newover();
+	Obj.Animal();
+	
+}
+}

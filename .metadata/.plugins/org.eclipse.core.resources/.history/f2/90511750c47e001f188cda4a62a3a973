@@ -1,0 +1,85 @@
+package com.glams.qa.testcases;
+
+import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.glams.ExtentReportListener.ScreenshotITListener;
+import com.glams.qa.base.TestBase;
+import com.glams.qa.pages.DashboardPage;
+import com.glams.qa.pages.GLAMSComponentTrackerPage;
+import com.glams.qa.pages.LoginPage;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class GLAMSComponentTrackerPageTest extends TestBase{
+	
+	LoginPage loginPage;
+	DashboardPage dashboardPage;
+	GLAMSComponentTrackerPage glamsComponentTrackerPage;
+	 public static ExtentReports extent; // Added ExtentReports
+	 public static ExtentTest extentTest; // ExtentTest to log test steps
+
+	
+	
+	public GLAMSComponentTrackerPageTest() {
+		super();
+	}
+
+	@BeforeMethod
+	public void setUp() {
+		// Initializing ExtentTest before each test
+        extentTest = extent.startTest("GLAMSComponentTrackerPageTest: SetUp");
+		initialization();
+		loginPage = new LoginPage();
+		loginPage.clickOpenMenu();
+		loginPage.clickFrenchtoEnglish();
+		// Logging test steps
+        extentTest.log(LogStatus.INFO, "Navigating to Dashboard page.");
+		dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"), 7, 7, 7);
+		extentTest.log(LogStatus.INFO, "Logged in as user: " + prop.getProperty("username"));
+		
+		glamsComponentTrackerPage = dashboardPage.clickOnGLAMSComponentTrackerPage();
+		extentTest.log(LogStatus.INFO, "Navigated to GLAMS Component Tracker Page.");
+		
+	}
+	
+	@Test
+	public void HoldAComponentJob() throws InterruptedException {
+		extentTest = extent.startTest("HoldAComponentJob Test");
+		glamsComponentTrackerPage.SearchandJobControl();
+		extentTest.log(LogStatus.INFO, "Search and Job Control executed.");
+		glamsComponentTrackerPage.AddbothComments();
+		extentTest.log(LogStatus.INFO, "Comments added successfully.");
+		glamsComponentTrackerPage.HoldJob();
+		extentTest.log(LogStatus.PASS, "Hold Job operation successful.");
+	}
+	
+	@AfterMethod
+	public void tearDown(ITestResult result) throws IOException {
+        // Check if test failed, passed, or was skipped
+        if (result.getStatus() == ITestResult.FAILURE) {
+            // Log the failure and capture a screenshot
+            String screenshotPath = ScreenshotITListener.getScreenshot(driver, result.getName());
+            extentTest.log(LogStatus.FAIL, "Test Case Failed: " + result.getName());
+            extentTest.log(LogStatus.FAIL, "Failure Reason: " + result.getThrowable());
+            extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));  // Adding screenshot to report
+        } else if (result.getStatus() == ITestResult.SUCCESS) {
+            extentTest.log(LogStatus.PASS, "Test Case Passed: " + result.getName());
+        } else if (result.getStatus() == ITestResult.SKIP) {
+            extentTest.log(LogStatus.SKIP, "Test Case Skipped: " + result.getName());
+        }
+
+        // End the test
+        extent.endTest(extentTest);
+
+        // Quit the driver
+        driver.quit();
+    }
+}
