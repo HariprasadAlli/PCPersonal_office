@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
-public class TestChromeLaunch {
+public class TestChromeLaunch1 {
 
     public static void main(String[] args) throws Exception {
         // Set up ChromeOptions
@@ -16,7 +16,7 @@ public class TestChromeLaunch {
         chromeOptions.addArguments("--remote-allow-origins=*");
 
         // Set the path to the ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\hariprasad.alli\\\\Downloads\\\\chromedriver-win64 (4).zip\\\\chromedriver-win64\\\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hariprasad.alli\\OneDrive - Perigord Premedia Ltd\\Documents\\Eclipse\\chromedriver-win64 (10)\\chromedriver-win64\\chromedriver.exe");
 
         // Create a new WebDriver instance
         WebDriver driver = new ChromeDriver(chromeOptions);

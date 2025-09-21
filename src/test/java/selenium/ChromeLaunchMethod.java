@@ -41,4 +41,8 @@ public class ChromeLaunchMethod {
 
 	}
 	
+	public static void main(String args[]) {
+		Login
+	}
+	
 }
