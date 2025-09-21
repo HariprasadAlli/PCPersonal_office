@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [GLAMS Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GLAMS WorkFlow(failed)">
+    <classes>
+      <class name="com.glams.qa.testcases.GLAMSFinalApprovalPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="FinalApprovalSubmit"/>
+        </methods>
+      </class> <!-- com.glams.qa.testcases.GLAMSFinalApprovalPageTest -->
+      <class name="com.glams.qa.testcases.GLAMSArtworkPageTest">
+        <methods>
+          <include name="ArtworkUploadSubmit"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.glams.qa.testcases.GLAMSArtworkPageTest -->
+      <class name="com.glams.qa.testcases.GLAMSComponentRequestPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="allMandatoryfieldsInRequestPage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.glams.qa.testcases.GLAMSComponentRequestPageTest -->
+    </classes>
+  </test> <!-- GLAMS WorkFlow(failed) -->
+</suite> <!-- Failed suite [GLAMS Test Suite] -->

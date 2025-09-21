@@ -8,11 +8,12 @@ import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -20,7 +21,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.glams.qa.base.TestBase;
 import com.glams.qa.pages.DashboardPage;
 import com.glams.qa.pages.GLAMSComponentRequestPage;
 import com.glams.qa.pages.GLAMSComponentTrackerPage;
@@ -43,7 +43,7 @@ public class SampleTestcase2 extends DashboardPage {
 		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReportNAutomation.html", true);
 		extent.addSystemInfo("User Name", "Hariprasad");
 		extent.addSystemInfo("OS", "Window11");
-		extent.addSystemInfo("Host Name", "Hariprasad");		
+		extent.addSystemInfo("Host Name", "Hariprasad");
 	}
 
 	@AfterTest
@@ -56,8 +56,6 @@ public class SampleTestcase2 extends DashboardPage {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File Source = ts.getScreenshotAs(OutputType.FILE);
-		// After execution., you could see a folder "FailedTestsScreensgots" -> under
-		// src folder
 		String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots" + ScreenshotName + dateName
 				+ ".png";
 		File finalDestination = new File(destination);
@@ -82,17 +80,40 @@ public class SampleTestcase2 extends DashboardPage {
 		System.out.println("who are youl;");
 	}
 
-
 	@Test
-	public void GLAMS() {
-		
+	public void GLAMS() throws InterruptedException {
+
 		extentTest = extent.startTest("GLAMS");
 //		driver.findElement(By.xpath("//button[@id='open-menu']")).click();
 //		driver.findElement(By.xpath("//ul[@id='language-menu']//li//a[text()='English ']")).click();
 
-		driver.findElement(By.xpath("//input[@id='UserName']")).sendKeys("xcvHariprasad");
-		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("Perigord2!a");
-		driver.findElement(By.xpath("//button[@id='login_submit']")).click();
+		driver.findElement(By.xpath("//input[@id='UserName']")).sendKeys("Hariprasad");
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("Perigord2!");
+		WebElement loginButton = driver.findElement(By.xpath("//button[@id='login_submit']"));
+		// Highlight the login button using JavaScript
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].style.border='3px solid red'", loginButton);
+
+		// Pause to see the effect (optional)
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		js.executeScript("history.go(0)");
+		Thread.sleep(2000);
+		
+		// Create JavaScriptExecutor
+        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        for (int i = 0; i < 100; i++) { 
+		js1.executeScript("arguments[0].style.backgroundColor='yellow'", loginButton);
+		js1.executeScript("arguments[0].style.backgroundColor=''", loginButton);
+        }
+        
+        
+        
+//		driver.findElement(By.xpath("//button[@id='login_submit']")).click();
+		
 		driver.findElement(By.id("vpin1")).sendKeys("7");
 		driver.findElement(By.id("vpin2")).sendKeys("7");
 		driver.findElement(By.id("vpin3")).sendKeys("7");
@@ -108,13 +129,15 @@ public class SampleTestcase2 extends DashboardPage {
 																							// extent Report
 
 			String ScreenshotPath = SampleTestcase2.getScreenshot(driver, result.getName());
-			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(ScreenshotPath));// to add screen in extent report
-		//  extentTest.log(LogStatus.FAIL, extentTest.addScreencast(ScreenshotPath));// to add cast/video in extent report
-			
+			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(ScreenshotPath));// to add screen in extent
+																						// report
+			// extentTest.log(LogStatus.FAIL, extentTest.addScreencast(ScreenshotPath));//
+			// to add cast/video in extent report
+
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			extentTest.log(LogStatus.SKIP, "TEST CASE SKIPPED IS " + result.getName());// to add name in extent Report
 		}
-		
+
 		else if (result.getStatus() == ITestResult.SUCCESS) {
 			extentTest.log(LogStatus.PASS, "TEST CASE PASSED IS " + result.getName());// to add name in extent Report
 		}

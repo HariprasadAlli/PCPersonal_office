@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GLAMS Test Suite" parallel="false">
+
+    <test name="GLAMS WorkFlow">
+        <classes>
+            <class name="com.glams.qa.testcases.GLAMSArtworkPageTest"/>
+        </classes>
+    </test>
+
+</suite>

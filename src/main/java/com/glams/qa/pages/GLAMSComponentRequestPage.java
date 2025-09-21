@@ -2,22 +2,20 @@ package com.glams.qa.pages;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.glams.qa.base.TestBase;
 
 public class GLAMSComponentRequestPage extends TestBase {
 
-	@FindBy(xpath = "//input[@name='GLAMS Component Name']")
-	WebElement GLAMSComponentNameInputField;
+//	@FindBy(xpath = "//input[@name='GLAMS Component Name']")
+//	WebElement GLAMSComponentNameInputField;
 
 	@FindBy(xpath = "(//*[@class='k-widget k-dropdown k-header ng-scope'])[1]")
 	WebElement ComponentTypeDropDown;
@@ -31,8 +29,8 @@ public class GLAMSComponentRequestPage extends TestBase {
 	@FindBy(xpath = "//div[@class='container-fluid main-holder']")
 	WebElement ClickASide;
 
-	@FindBy(xpath = "//li[text()='Hyderabad']")
-	WebElement CountryHyderabad;
+	@FindBy(xpath = "//li[text()='India']")
+	WebElement CountryIndia;
 
 	@FindBy(xpath = "(//div[@class='k-multiselect-wrap k-floatwrap'])[2]")
 	WebElement ProductNameDropDown;
@@ -62,11 +60,11 @@ public class GLAMSComponentRequestPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void GLAMSComponentNameInputFieldSendKeys(String componentName) {
-		// Send the provided component name to the input field
-		GLAMSComponentNameInputField.sendKeys(componentName);
-	}
-
+//	public void GLAMSComponentNameInputFieldSendKeys(String componentName) {
+//		// Send the provided component name to the input field
+//		GLAMSComponentNameInputField.sendKeys(componentName);
+//	}
+//
 	public void GLAMSClickASide() {
 		ClickASide.click();
 	}
@@ -83,30 +81,31 @@ public class GLAMSComponentRequestPage extends TestBase {
 		} catch (TimeoutException e) {
 			System.out.println("Element not clickable: " + e.getMessage());
 		}
-		GLAMSClickASide();
+	}
+//		GLAMSClickASide();
 //		ComponentTypeDropDown.click();
 //		ComponentTypeBlister.click();
 //		GLAMSClickASide();
 
-	}
-
+//
 	public void GLAMSCountryDropDown() {
 		CountryDropDown.click();
-		CountryHyderabad.click();
+		CountryIndia.click();
 		GLAMSClickASide();
 
 	}
-	
-	public void printsomething() {
-		System.out.println("222");
+
+//	
+//	public void printsomething() {
+//		System.out.println("222");
+//	}
+//
+	public void GLAMSComments(String comment) {
+		GLAMSComm.click();
+		GLAMSComm.sendKeys(comment);
 	}
 
-	public void GLAMSComments() {
-
-		GLAMSComm.sendKeys("Comments");
-		
-	}
-
+//
 	public void GLAMSProductNameDropDown() {
 		ProductNameDropDown.click();
 		ProductNameAcular.click();
@@ -114,21 +113,22 @@ public class GLAMSComponentRequestPage extends TestBase {
 
 	}
 
-	public void GLAMSPackagingSiteDropDown() {
-		PackagingSiteDropDown.click();
-		PackagingSiteCMO1.click();
+//	public void GLAMSPackagingSiteDropDown() {
+//		PackagingSiteDropDown.click();
+//		PackagingSiteCMO1.click();
+//
+//	}
+//
+//	public void GLAMSCurrentPackagingCodeInputField(String PackagingText) {
+//		// Send the provided component name to the input field
+//		CurrentPackagingCodeInputField.sendKeys(PackagingText);
+//	}
 
-	}
-
-	public void GLAMSCurrentPackagingCodeInputField(String PackagingText) {
-		// Send the provided component name to the input field
-		CurrentPackagingCodeInputField.sendKeys(PackagingText);
-	}
-
-	public DashboardPage GLAMSSaveSubmitbutton() {
+	public DashboardPage GLAMSSaveSubmitbutton() throws Exception {
 		SaveSubmitbutton.click();
-
+		Thread.sleep(5000);
 		Ok.click();
+		
 		return new DashboardPage();
 
 	}
